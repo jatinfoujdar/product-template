@@ -1,5 +1,6 @@
 import React from 'react';
 import {ThemeProvider , createTheme, CssBaseline } from "@mui/material";
+import Header from './Header';
 const theme = createTheme({
     pallete:{
         mode : "light",
@@ -12,7 +13,7 @@ function Layout() {
     
     <ThemeProvider theme={theme}>
        <CssBaseline />
-       <header></header>
+       <Header/>
        <main>display the content</main>
        <footer></footer>
     </ThemeProvider>
