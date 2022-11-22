@@ -3,7 +3,7 @@ import { AppBar, Badge, IconButton, Toolbar, Typography, Box, Button  } from '@m
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCartSharp"
 
 function Header() {
-  return <AppBar>
+  return <AppBar position='sticky'>
     <Toolbar>
         <Typography variant='h6' color="inherit" sx={{flexGrow:1}}>Flipkart</Typography>
         <Box sx={{display:{md:"flex"}}}>
