@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Badge, IconButton, Toolbar, Typography, Box  } from '@mui/material'
+import { AppBar, Badge, IconButton, Toolbar, Typography, Box, Button  } from '@mui/material'
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCartSharp"
 
 function Header() {
@@ -13,6 +13,7 @@ function Header() {
          </Badge>
         </IconButton>
         </Box>
+     <Button color="inherit">Login</Button>
     </Toolbar>
   </AppBar>
 }

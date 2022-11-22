@@ -14,7 +14,7 @@ function Layout() {
     <ThemeProvider theme={theme}>
        <CssBaseline />
        <Header/>
-       <main>display the content</main>
+       <main></main>
        <footer></footer>
     </ThemeProvider>
     
