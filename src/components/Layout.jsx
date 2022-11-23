@@ -1,18 +1,20 @@
 import React from 'react';
-import {ThemeProvider , createTheme, CssBaseline } from "@mui/material";
+import {ThemeProvider , createTheme } from "@mui/material";
+import CssBaseline from '@mui/material/CssBaseline';
 import Header from './Header';
 import Home from '../pages/Home';
-const theme = createTheme({
-    pallete:{
-        mode : "light",
-    }
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
 });
 
 
 function Layout() {
   return (
     
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
        <CssBaseline />
        <Header/>
        <Home />
