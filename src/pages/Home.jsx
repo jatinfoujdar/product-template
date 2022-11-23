@@ -22,10 +22,15 @@ const theme = useTheme();
           {products.map(({title , id , price , description , rating , image})=>
           (<Grid item key={id} xs={12} md={3}>
             <Card sm={{height:"100%", display:"flx", flexDirextion:"column"}}>
-              <CardMedia component="img" sx={{alignSelf:"center",width: theme.spacing(30),height:theme.spacing(30),objectFit:"contain"}} image={image} alt={title} />
+              <CardMedia component="img" sx={{alignSelf:"center",width: theme.spacing(30),height:theme.spacing(30),objectFit:"contain" , pt:theme.spacing()}}
+               image={image} alt={title}/>
               <CardContent>
                 <Typography vartiant="h5" component="h2" gutterBottom sx={{
-
+                  overflow:"hidden",
+                  textOverflow:"ellipsis",
+                  display:"-webkit-box",
+                  "-webkit-line-clamp": "1",
+                  "webkit-box-orient": "vertical",
                 }}>{title}</Typography>
                 <Typography>{description} </Typography>
                 <Typography>{price} </Typography>
