@@ -25,14 +25,23 @@ const theme = useTheme();
               <CardMedia component="img" sx={{alignSelf:"center",width: theme.spacing(30),height:theme.spacing(30),objectFit:"contain" , pt:theme.spacing()}}
                image={image} alt={title}/>
               <CardContent>
-                <Typography vartiant="h5" component="h2" gutterBottom sx={{
-                  overflow:"hidden",
-                  textOverflow:"ellipsis",
-                  display:"-webkit-box",
-                  "-webkit-line-clamp": "1",
-                  "webkit-box-orient": "vertical",
-                }}>{title}</Typography>
-                <Typography>{description} </Typography>
+                <Typography variant="h5" component="h2" gutterBottom sx={{
+                  overflow : "hidden" ,
+                  textOverflow : "ellipsis",
+                  display: "-webkit-box",
+                 "-webkit-line-clamp" : "1",
+                   "-webkit-box-orient" : "vertical"  
+                }}>
+                {title}
+                </Typography>
+                <Typography sx={{
+                  overflow : "hidden" ,
+                  textOverflow : "ellipsis",
+                  display: "-webkit-box",
+                 "-webkit-line-clamp" : "3",
+                   "-webkit-box-orient" : "vertical"  
+                }}>
+                  {description} </Typography>
                 <Typography>{price} </Typography>
                 <Rating readOnly precision={0.5} value={rating.rate}></Rating>
 
