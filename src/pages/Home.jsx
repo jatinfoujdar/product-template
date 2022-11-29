@@ -1,4 +1,5 @@
-import { Card, CardMedia, Grid, Container, Typography, Rating, CardContent, useTheme } from '@mui/material';
+import { ShoppingCartSharp } from '@mui/icons-material';
+import { Card, CardMedia, Grid, Container, Typography, Rating, CardContent, useTheme, CardActions, Button } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 
 
@@ -34,7 +35,10 @@ const theme = useTheme();
                 }}>
                 {title}
                 </Typography>
-                <Typography sx={{
+                <Typography
+                color = "text.secondary"
+                paragraph
+                 sx={{
                   overflow : "hidden" ,
                   textOverflow : "ellipsis",
                   display: "-webkit-box",
@@ -42,10 +46,19 @@ const theme = useTheme();
                    "-webkit-box-orient" : "vertical"  
                 }}>
                   {description} </Typography>
-                <Typography>{price} </Typography>
+                <Typography fontSize= "large" paragraph >{price} </Typography>
                 <Rating readOnly precision={0.5} value={rating.rate}></Rating>
 
               </CardContent>
+              <CardActions
+               sx={{
+                alignSelf: "center",
+              }}>
+                 <Button variant="contained">
+                  <ShoppingCartSharp />
+                    Add to Cart
+                 </Button>
+              </CardActions>
             </Card>
           </Grid>))}
         </Grid>
